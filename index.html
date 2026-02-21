@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mahajan Chalk Industries | Since 1953</title>
+<meta name="description" content="Mahajan Chalk Industries - Superior Quality Chalk Manufacturer Since 1953, Jalandhar Punjab.">
 
 <style>
 * {
@@ -16,6 +17,7 @@
 body {
     background: #ffffff;
     color: #000;
+    line-height: 1.6;
 }
 
 /* ================= HEADER ================= */
@@ -44,11 +46,10 @@ nav a:hover {
 
 .hero {
     position: relative;
-    height: 100vh; /* Full screen height */
+    min-height: 100vh; /* Works better on mobile */
     overflow: hidden;
 }
 
-/* Image that auto fits all screens */
 .hero-img {
     position: absolute;
     width: 100%;
@@ -57,7 +58,6 @@ nav a:hover {
     object-position: center; /* Keeps center safe */
 }
 
-/* Light overlay so buttons are visible */
 .hero-overlay {
     position: absolute;
     width: 100%;
@@ -65,7 +65,6 @@ nav a:hover {
     background: rgba(0, 0, 0, 0.30);
 }
 
-/* Buttons container */
 .hero-content {
     position: absolute;
     bottom: 60px;
@@ -75,6 +74,7 @@ nav a:hover {
 }
 
 /* Buttons */
+
 .btn {
     display: inline-block;
     padding: 16px 35px;
@@ -103,6 +103,38 @@ nav a:hover {
     background: #e86c00;
 }
 
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 70px 8%;
+}
+
+h3 {
+    font-size: 30px;
+    color: #0B3D2E;
+    margin-bottom: 20px;
+}
+
+.product-box {
+    border: 1px solid #ddd;
+    padding: 25px;
+    background: #fff8dc;
+}
+
+iframe {
+    width: 100%;
+    height: 250px;
+    border: 0;
+    margin-top: 20px;
+}
+
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media(max-width:768px) {
@@ -128,7 +160,6 @@ nav a:hover {
         margin: 10px auto;
     }
 }
-
 </style>
 </head>
 
@@ -146,7 +177,6 @@ nav a:hover {
 
 <section class="hero" id="home">
 
-    <!-- HERO IMAGE -->
     <img src="hero-image.png" class="hero-img" alt="Mahajan Chalk Industries Banner">
 
     <div class="hero-overlay"></div>
@@ -162,7 +192,8 @@ nav a:hover {
     </div>
 
 </section>
-    <section id="about">
+
+<section id="about">
     <h3>About Us</h3>
     <p>Established in 1953, Mahajan Chalk Industries has been a trusted manufacturer of high-quality chalk for over six decades. Based in Jalandhar, Punjab, we proudly supply schools, wholesalers, and distributors across India.</p>
     <p>Our commitment to quality, consistency, and long-term partnerships has made us a reliable name in the education supplies industry.</p>
@@ -194,21 +225,5 @@ nav a:hover {
     © 2025 Mahajan Chalk Industries. All Rights Reserved.
 </footer>
 
-<script>
-    let slides = document.querySelectorAll('.slides img');
-    let index = 0;
-
-    setInterval(() => {
-        slides[index].classList.remove('active');
-        index = (index + 1) % slides.length;
-        slides[index].classList.add('active');
-    }, 3000);
-</script>
-
 </body>
 </html>
-
-
-</body>
-</html>
-
