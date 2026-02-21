@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,73 +29,42 @@
 
         section { padding:70px 8%; }
 
-        /* HERO SLIDESHOW */
+        /* HERO SECTION */
         .hero {
-            position:relative;
-            color:white;
-            text-align:center;
-            overflow:hidden;
+            position: relative;
+            height: 100vh;
+            background: url('hero-image.png') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
-        .slides {
-            position:absolute;
-            width:100%;
-            height:100%;
-            top:0;
-            left:0;
-            z-index:1;
-        }
-
-        .slides img {
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            position:absolute;
-            opacity:0;
-            transition:opacity 1s ease-in-out;
-        }
-
-        .slides img.active { opacity:1; }
 
         .hero-overlay {
-            position:absolute;
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
-            background:rgba(11,61,46,0.85);
-            z-index:2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11,61,46,0.75);
+            z-index: 1;
         }
 
         .hero-content {
-            position:relative;
-            z-index:3;
-            padding:120px 20px;
+            position: relative;
+            z-index: 2;
+            text-align: center;
         }
-
-        .badge {
-            display:inline-block;
-            background:#f4b400;
-            color:black;
-            padding:6px 16px;
-            border-radius:20px;
-            font-weight:bold;
-            margin-bottom:20px;
-        }
-
-        .hero h2 { font-size:46px; margin-bottom:10px; }
-        .tagline { color:#ff7a00; font-size:22px; font-weight:bold; margin-bottom:25px; }
-
-        .features { list-style:none; margin-bottom:30px; font-size:18px; }
-        .features li { margin:10px 0; }
 
         .btn {
             display:inline-block;
-            padding:14px 30px;
+            padding:16px 35px;
             text-decoration:none;
             font-weight:bold;
             margin:10px;
             color:white;
+            border-radius:30px;
+            font-size:18px;
+            transition:0.3s ease;
         }
 
         .whatsapp-btn { background:#25D366; }
@@ -122,9 +91,9 @@
         }
 
         @media(max-width:768px){
-            .hero h2 { font-size:30px; }
             header { flex-direction:column; align-items:flex-start; }
             nav a { display:block; margin:5px 0; }
+            .btn { display:block; width:80%; margin:10px auto; }
         }
     </style>
 </head>
@@ -141,28 +110,15 @@
 </header>
 
 <section class="hero" id="home">
-
-    <div class="slides">
-        <!-- Replace these image names with your product images -->
-        <img src="slide1.jpg" class="active">
-        <img src="slide2.jpg">
-        <img src="slide3.jpg">
-    </div>
-
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-        <div class="badge">Since 1953</div>
-        <h2>Mahajan Chalk Industries</h2>
-        <div class="tagline">Superior Quality Chalk</div>
-        <ul class="features">
-            <li>Dustless</li>
-            <li>Smooth Writing</li>
-            <li>40 Sticks Pack</li>
-            <li>Ideal for Schools</li>
-        </ul>
-        <a href="https://wa.me/919876200666" target="_blank" class="btn whatsapp-btn">Chat on WhatsApp</a>
-        <a href="mailto:mci.tmsc@gmail.com" class="btn email-btn">Email Us</a>
+        <a href="https://wa.me/919876200666" target="_blank" class="btn whatsapp-btn">
+            Chat on WhatsApp
+        </a>
+        <a href="mailto:mci.tmsc@gmail.com" class="btn email-btn">
+            Email Us
+        </a>
     </div>
 </section>
 
@@ -197,17 +153,6 @@
 <footer>
     © 2025 Mahajan Chalk Industries. All Rights Reserved.
 </footer>
-
-<script>
-    let slides = document.querySelectorAll('.slides img');
-    let index = 0;
-
-    setInterval(() => {
-        slides[index].classList.remove('active');
-        index = (index + 1) % slides.length;
-        slides[index].classList.add('active');
-    }, 3000);
-</script>
 
 </body>
 </html>
