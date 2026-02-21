@@ -46,18 +46,19 @@ nav a:hover {
 
 .hero {
     position: relative;
-    min-height: 100vh; /* Works better on mobile */
+    min-height: 100vh;
     overflow: hidden;
 }
 
 .hero-img {
     position: absolute;
+    top: 0;
+    left: 0;          /* 👈 This fixes the shifting */
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* Auto crop properly */
-    object-position: center; /* Keeps center safe */
+    object-fit: cover;
+    object-position: center center;  /* 👈 Keeps it perfectly centered */
 }
-
 .hero-overlay {
     position: absolute;
     width: 100%;
@@ -227,3 +228,4 @@ footer {
 
 </body>
 </html>
+
